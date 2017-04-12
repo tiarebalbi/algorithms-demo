@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StackTest {
+public class LinkedStackTest {
 
   private Stack<Integer> stack;
 
@@ -45,6 +45,13 @@ public class StackTest {
   @Test
   public void shouldCheckIfStackIsEmpty() {
     assertThat(this.stack.isEmpty()).isTrue();
+  }
+
+  @Test
+  public void shouldCheckIfStackIsNotEmpty() {
+    stack.push(3);
+
+    assertThat(this.stack.isEmpty()).isFalse();
   }
 
 }
