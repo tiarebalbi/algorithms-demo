@@ -1,6 +1,6 @@
 package com.tiarebalbi.part1;
 
-public class LinkedStack<T> implements Stack<T> {
+class LinkedStack<T> implements Stack<T> {
 
   private Node<T> first;
 
