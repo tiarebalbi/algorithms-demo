@@ -1,4 +1,4 @@
-package com.tiarebalbi.part1;
+package com.tiarebalbi.section_one.stack;
 
 class Node<T> {
   private T item;

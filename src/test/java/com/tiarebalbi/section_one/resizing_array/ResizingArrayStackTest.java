@@ -1,42 +1,43 @@
-package com.tiarebalbi.part1;
+package com.tiarebalbi.section_one.resizing_array;
 
+import com.tiarebalbi.section_one.Stack;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LinkedStackTest {
+public class ResizingArrayStackTest {
 
-  private Stack<Integer> stack;
+  private Stack<String> stack;
 
   @Before
   public void setUp() throws Exception {
-    this.stack = new LinkedStack<>();
+    this.stack = new ResizingArrayStack();
   }
 
   @Test
   public void shouldAddOneElementToTheStack() {
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
+    stack.push("X");
+    stack.push("D");
+    stack.push("C");
 
-    assertThat(stack.pop()).isEqualTo(3);
-    assertThat(stack.pop()).isEqualTo(2);
-    assertThat(stack.pop()).isEqualTo(1);
+    assertThat(stack.pop()).isEqualTo("C");
+    assertThat(stack.pop()).isEqualTo("D");
+    assertThat(stack.pop()).isEqualTo("X");
 
     assertThat(stack.size()).isEqualTo(0);
   }
 
   @Test
   public void shouldCheckStackSize() {
-    stack.push(2);
-    stack.push(4);
-    stack.push(6);
+    stack.push("Z1");
+    stack.push("F1");
+    stack.push("P1");
 
     assertThat(this.stack.size()).isEqualTo(3);
 
-    assertThat(stack.pop()).isEqualTo(6);
-    assertThat(stack.pop()).isEqualTo(4);
+    assertThat(stack.pop()).isEqualTo("P1");
+    assertThat(stack.pop()).isEqualTo("F1");
 
     assertThat(this.stack.size()).isEqualTo(1);
 
@@ -49,9 +50,8 @@ public class LinkedStackTest {
 
   @Test
   public void shouldCheckIfStackIsNotEmpty() {
-    stack.push(3);
+    stack.push("ABC");
 
     assertThat(this.stack.isEmpty()).isFalse();
   }
-
 }

@@ -1,6 +1,6 @@
-package com.tiarebalbi.part1;
+package com.tiarebalbi.section_one;
 
-interface Stack<T> {
+public interface Stack<T> {
 
   /**
    * Insert a new item onto stack

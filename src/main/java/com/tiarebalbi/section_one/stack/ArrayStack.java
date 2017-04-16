@@ -1,4 +1,6 @@
-package com.tiarebalbi.part1;
+package com.tiarebalbi.section_one.stack;
+
+import com.tiarebalbi.section_one.Stack;
 
 class ArrayStack implements Stack<String> {
 
