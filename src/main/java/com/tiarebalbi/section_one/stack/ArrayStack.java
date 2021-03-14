@@ -4,7 +4,7 @@ import com.tiarebalbi.section_one.Stack;
 
 class ArrayStack implements Stack<String> {
 
-  private String[] items;
+  private final String[] items;
   private int N = 0;
 
   public ArrayStack(int capacity) {
