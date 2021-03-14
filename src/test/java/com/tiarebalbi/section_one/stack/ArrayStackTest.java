@@ -1,8 +1,8 @@
 package com.tiarebalbi.section_one.stack;
 
 import com.tiarebalbi.section_one.Stack;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,7 +10,7 @@ public class ArrayStackTest {
 
   private Stack<String> stack;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     this.stack = new ArrayStack(10);
   }
